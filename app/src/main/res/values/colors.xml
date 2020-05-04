@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">@android:color/black</color>
+    <color name="colorAccent">#03DAC5</color>
+
+
+    <color name="bg_btn_schedule">#DD9C359C</color>
+    <color name="bg_copyright">#DD7496C1</color>
+    <color name="bg_card">@color/bg_explanation</color>
+    <color name="bg_date">#DD2E0059</color>
+    <color name="bg_explanation">#DD5754A8</color>
+</resources>

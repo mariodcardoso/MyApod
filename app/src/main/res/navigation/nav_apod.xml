@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_apod.xml"
+    app:startDestination="@id/listApodFragment">
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="br.com.myapod.ui.apoddetails.DetailsFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_details_start">
+        <action
+            android:id="@+id/action_detailsFragment_to_listApodFragment"
+            app:destination="@id/listApodFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="apodResponse"
+            app:argType="br.com.myapod.source.remote.response.ApodResponse" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/listApodFragment"
+        android:name="br.com.myapod.ui.apodlist.ListApodFragment"
+        android:label="ListApodFragmment"
+        tools:layout="@layout/fragment_apod_list">
+        <action
+            android:id="@+id/action_listApodFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>

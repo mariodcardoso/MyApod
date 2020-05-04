@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/fragment_details_end"
+        app:constraintSetStart="@layout/fragment_details_start">
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/ctn_title" />
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="0"
+                app:motionTarget="@id/img_apod">
+                <CustomAttribute
+                    app:attributeName="saturation"
+                    app:customFloatValue="1" />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="100"
+                app:motionTarget="@id/img_apod">
+                <CustomAttribute
+                    app:attributeName="saturation"
+                    app:customFloatValue="0" />
+            </KeyAttribute>
+
+        </KeyFrameSet>
+
+    </Transition>
+
+</MotionScene>

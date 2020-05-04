@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/card_txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_card_apod"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/card_img_apod"
+        app:layout_constraintRight_toRightOf="@id/card_img_apod"
+        app:layout_constraintTop_toBottomOf="@id/card_img_apod"
+        tools:text="29-04-2020" />
+
+    <ImageView
+        android:id="@+id/card_img_apod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:scaleType="fitXY"
+        tools:background="@drawable/photo_apod" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

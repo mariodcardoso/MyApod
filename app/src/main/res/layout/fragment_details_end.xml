@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motion_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    app:layoutDescription="@xml/motion_scene">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/img_apod"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/ctn_description"
+        tools:src="@drawable/photo_apod" />
+
+    <LinearLayout
+        android:id="@+id/ctn_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/ctn_description">
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="180"
+            android:src="@drawable/ic_arrow" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            tools:text="Hello World!" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ctn_description"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/bg_explanation"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:lineSpacingExtra="5dp"
+            android:paddingHorizontal="40dp"
+            android:textSize="16sp"
+            tools:text="Hello World!" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ctn_copyright"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_copyright"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@id/ctn_title"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/txt_date">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="photo by: "
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txt_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:maxWidth="200dp"
+            android:textSize="18sp"
+            tools:text="Gerald Rhemann" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_date_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_button"
+        android:padding="20dp"
+        android:src="@drawable/ic_date_range"
+        app:layout_constraintBottom_toTopOf="@id/txt_date"
+        app:layout_constraintLeft_toLeftOf="@id/txt_date"
+        app:layout_constraintRight_toRightOf="@id/txt_date" />
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_date"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingVertical="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/ctn_copyright"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="29-04-2020" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
