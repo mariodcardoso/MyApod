@@ -1,6 +1,6 @@
 package br.com.myapod.di.module
 
-import br.com.myapod.BuildConfig
+import br.com.myapod.utils.BASE_URL
 import dagger.Module
 import dagger.Provides
 import okhttp3.HttpUrl
@@ -13,7 +13,7 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideBaseUrl() = checkNotNull(HttpUrl.parse(BuildConfig.BASE_URL)) { "BaseUrl is Null" }
+    fun provideBaseUrl() = checkNotNull(HttpUrl.parse(BASE_URL)) { "BaseUrl is Null" }
 
     @Singleton
     @Provides

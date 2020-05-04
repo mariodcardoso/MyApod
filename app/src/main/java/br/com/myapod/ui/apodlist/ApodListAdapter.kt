@@ -58,7 +58,4 @@ class ApodAdapter(
         fun onApodClick(apodItem: ApodResponse)
     }
 
-
-
-
 }
